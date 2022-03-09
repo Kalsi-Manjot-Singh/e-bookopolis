@@ -1,0 +1,115 @@
+/* Defining color variables */
+:root {
+  --webite-bg: #BDC6FF;
+  --navtext: #1A274A;
+  --marketingMsg: #000000;
+  --webcopy: #39518F;
+  --buttonText: #BDC6FF;
+  --button-bg: #6791FF;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*to exclude content box width/height in total width/height*/
+}
+
+/* Website Body Styles */
+
+body {
+  background-color: var(--webite-bg);
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* The Website Container styless */
+.wrapper {
+  min-width: 1440px;
+  height: 790px;
+  /* border: 2px solid red; */
+}
+
+/* Nav and Logo styles */
+
+nav {
+  display: flex;
+  /* border: 2px solid white; */
+  margin-top: 60px;
+  margin-left: 120px;
+  margin-right: 122px;
+  justify-content: space-between;
+  color: var(--navtext);
+  font-size: 1.5em;
+}
+
+.nav-items ul {
+  display: flex;
+}
+
+.nav-items ul li {
+  list-style: none;
+  margin-right: 45px;
+}
+
+.nav-items ul li a {
+  text-decoration: none;
+  color: var(--navtext);
+}
+
+.nav-items ul li a:hover {
+  text-decoration: none;
+  color: var(--webcopy);
+}
+
+.nav-items ul li a:active {
+  text-decoration: none;
+  color: var(--webcopy);
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 51px;
+  width: 51px;
+  background-color: #C4C4C4;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 160px;
+  margin-left: 120px;
+  margin-right: 122px;
+}
+
+.hero-left {
+  margin-top: 9em;
+}
+.hero-left h1 {
+  color: var(--marketingMsg);
+  font-size:3.5em;
+  line-height: 1.2em;
+}
+
+.hero-left p {
+  color: var(--webcopy);
+  font-size: 2em;
+  line-height: 1.2em;
+}
+
+.btn {
+  margin-top:30px;
+}
+.btn a{
+  color: var(--buttonText);
+  font-size: 1.2em;
+  background-color: var(--button-bg);
+  text-decoration: none;
+  padding: 0.58em;
+  border-radius: 1.05em;
+}
+
+.hero-right {
+  margin-right: 174px;
+}
