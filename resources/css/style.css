@@ -1,11 +1,11 @@
 /* Defining color variables */
 :root {
-  --webite-bg: #BDC6FF;
-  --navtext: #1A274A;
+  --webite-bg: #bdc6ff;
+  --navtext: #1a274a;
   --marketingMsg: #000000;
-  --webcopy: #39518F;
-  --buttonText: #BDC6FF;
-  --button-bg: #6791FF;
+  --webcopy: #39518f;
+  --buttonText: #bdc6ff;
+  --button-bg: #6791ff;
 }
 
 /* CSS Reset */
@@ -20,7 +20,7 @@
 body {
   background-color: var(--webite-bg);
   font-size: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* The Website Container styless */
@@ -44,28 +44,28 @@ nav {
   font-weight: 700;
 }
 
-.nav-items ul {
+.nav-items ul{
   display: flex;
 }
 
-.nav-items ul li {
+.nav-items ul li{
   list-style: none;
   margin-right: 45px;
 }
 
-.nav-items ul li a {
+.nav-items ul li a{
   text-decoration: none;
   color: var(--navtext);
 }
 
-.nav-items ul li a:hover {
+.nav-items ul li a:hover{
   text-decoration: none;
-  color: var(--webcopy);
+  color: white;
 }
 
-.nav-items ul li a:active {
+.nav-items ul li a:active{
   text-decoration: none;
-  color: var(--webcopy);
+  color: white;
 }
 
 .profile-img {
@@ -89,7 +89,7 @@ nav {
 }
 .hero-left h1 {
   color: var(--marketingMsg);
-  font-size:1.5em;
+  font-size: 1.5em;
   /* line-height: 1.2em; */
 }
 
@@ -101,17 +101,110 @@ nav {
 }
 
 .btn {
-  margin-top:30px;
+  margin-top: 30px;
 }
-.btn a{
+.btn a {
   color: var(--buttonText);
   font-size: 0.8em;
   background-color: var(--button-bg);
   text-decoration: none;
   padding: 0.48em;
-  border-radius: 1.05em;
+  border-radius: 0.76em;
+  transition: all 0.3s ease-in-out;
 }
 
+.btn a:hover {
+  color: var(--button-bg);
+  background-color: #ffffff;
+}
 .hero-right {
   margin-right: 1em;
+}
+
+footer {
+  background-color:#AAB2E5;
+  padding: 25px;
+  width: 1195px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+footer p {
+  color: #111a31;
+  font-size: 0.9em;
+}
+
+/* Item Information Page Styles */
+
+/* Hero Section */
+.product {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  margin-left: 120px;
+  margin-right: 222px;
+}
+
+.product-left {
+  margin-right: 2em;
+}
+
+.product-right {
+  /* display: flex; */
+}
+.btn{
+  margin-left: 70px;
+}
+
+
+.product-right h1 {
+  color: var(--marketingMsg);
+  font-size: 1.5em;
+  /* line-height: 1.2em; */
+}
+
+.product-right p {
+  color: var(--webcopy);
+  font-size: 0.6em;
+  line-height: 1.1em;
+  margin-top: 20px;
+}
+
+.product-right .btn {
+  margin-top: 30px;
+  width: 4em;
+}
+
+.btn a {
+  color: var(--buttonText);
+  font-size: 0.8em;
+  background-color: var(--button-bg);
+  text-decoration: none;
+  padding: 0.38em;
+  border-radius: 0.66em;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn a:hover {
+  color: var(--button-bg);
+  background-color: #ffffff;
+}
+
+.prodInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.prodInfo p {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+}
+
+.author p {
+  margin-right: 50px;
 }
