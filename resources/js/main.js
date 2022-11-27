@@ -39,6 +39,7 @@ $(document).ready(()=>{
     $("#email").val(email);
     
     // Validates the password
+    // !TODO: Fix password authentication error. (Some error in lines 43 - 54). maybe incorrect regex.
     const passwd = $("#passwd").val().trim();
     const passwdRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
     if(passwd==""){
