@@ -4,204 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/style.css" />
     <title>E-Bookopolis</title>
-    <style>
-      .banner img {
-        width: 1300px;
-        height: 250px;
-        margin: 40px auto;
-        margin-left: 100px;
-      }
-
-      .catalogue {
-        text-align: center;
-      }
-
-      .catalogue h1 {
-        color: var(--marketingMsg);
-        font-size: 1.3em;
-      }
-
-      .divider {
-        border: 2px solid #6791ff;
-        width: 167px;
-        margin: 10px auto;
-      }
-
-      .items {
-        /* border: 2px solid red; */
-        height: 300px;
-        width: 1200px;
-        margin: 40px auto;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .item1 {
-        position: relative;
-        width: 223px;
-        height: 216px;
-      }
-
-      .image {
-        display: block;
-        width: 100%;
-      }
-
-      /* Hero Section */
-.product {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 70px;
-  margin-left: 120px;
-  margin-right: 222px;
-}
-
-.product-left {
-  margin-right: 2em;
-}
-
-.product-right {
-  /* display: flex; */
-}
-.btn{
-  margin-left: 70px;
-}
-
-
-.product-right h1 {
-  color: var(--marketingMsg);
-  font-size: 1.5em;
-  /* line-height: 1.2em; */
-}
-
-.product-right p {
-  color: var(--webcopy);
-  font-size: 0.6em;
-  line-height: 1.1em;
-  margin-top: 20px;
-}
-
-.product-right .btn {
-  margin-top: 30px;
-  width: 4em;
-}
-
-.btn a {
-  color: var(--buttonText);
-  font-size: 0.8em;
-  background-color: var(--button-bg);
-  text-decoration: none;
-  padding: 0.38em;
-  border-radius: 0.66em;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn a:hover {
-  color: var(--button-bg);
-  background-color: #ffffff;
-}
-
-.prodInfo {
-  display: flex;
-  flex-direction: column;
-}
-
-.prodInfo p {
-  font-size: 20px;
-  font-weight: normal;
-}
-
-.author {
-  display: flex;
-  flex-direction: row;
-}
-
-.author p {
-  margin-right: 50px;
-}
-
-    </style>
+ 
   </head>
   <body>
     <div class="wrapper">
       <!-- Navigation and Logo -->
       <nav>
-        <div class="logo">E-bookopolis</div>
+        <div class="logo"><a href="./index.html"><img src="./resources/img/Logo.svg" alt="Website Logo"></a></div>
+        <div class="searchBar">
+          <input type="text" name="search" id="search" placeholder="Search..." autocomplete="off">
+          <button type="submit"><img src="./resources/img/Search.svg" alt=""></button>
+        </div>
+
         <div class="nav-items">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="store.html">Store</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Cart</a></li>
+            <li>Hello User!</li>
           </ul>
-        </div>
-        <div class="profile-img">
-          <div class="image"></div>
         </div>
       </nav>
 
+
       <div class="banner">
-        <img src="./resources/img/banner.svg" alt="" />
+        <img src="./resources/img/banner.png" alt="banner" />
+        <h1>Which book are you looking for?</h1>
       </div>
+
       <div class="catalogue">
-        <h1>Books</h1>
-          <div class="divider"></div>
-      </div>
-      <div class="product">
-        <div class="product-left">
-          <img
-            src="./resources/css/img/book1.svg"
-            alt=""
-            style="width: 260px"
-          />
-          <input type="number" name="quantity" id="quantity" placeholder="quantity" style="width:80px; height: 30px; margin-left: 20px">
-          <div class="btn"><a href="checkOut.html">Buy Now</a></div>
-        </div>
-        
-        <div class="product-right">
-          <div class="title">
-            <h1>Harry Potter And Philosopher's Stone</h1>
-          </div>
-          <div class="prodInfo">
-            <div class="author">
-              <p>Author: J.K. Rowling
-              </p>
-              <p>Co Author: Null</p>
-            </div>
-            <div class="publisher">
-              <p>Publisher: Bloomsbury</p>
-            </div>
-            <div class="lang">
-              <p>Language: English</p>
-            </div>
-            <div class="genre">
-              <p>Genre: Fantasy Fiction</p>
-            </div>
-            <div class="isbnNo">
-              <p>ISBN No: 9781408855898, 1408855895</p>
-            </div>
-            <div class="pageNo">
-              <p>Page Count: 352</p>
-            </div>
-            <div class="price">
-              <p>Price: $3.94</p>
-            </div>
-          </div>
-
-          <div class="divider"></div>
-
+        <h1>Best Sellers</h1>
+        <div class="divider"></div>
+        <div class="catalogue-grid">
+          <div class="griditems"><img src="./resources/css/img/book1.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book2.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book3.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book4.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book5.svg" alt=""></div>
         </div>
       </div>
-      <footer>
+
+      <div class="catalogue">
+        <h1>Fiction</h1>
+        <div class="divider"></div>
+        <div class="catalogue-grid">
+          <div class="griditems"><img src="./resources/css/img/book1.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book4.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book6.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book7.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book8.svg" alt=""></div>
+        </div>
+      </div>
+
+      <div class="catalogue">
+        <h1>Non Fiction</h1>
+        <div class="divider"></div>
+        <div class="catalogue-grid">
+          <div class="griditems"><img src="./resources/css/img/book9.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book10.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book3.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book2.svg" alt=""></div>
+          <div class="griditems"><img src="./resources/css/img/book5.svg" alt=""></div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <!-- <footer>
         <p>&copy;Copyrights 2022</p>
-      </footer>
+      </footer> -->
     </div>
   </body>
 </html>
