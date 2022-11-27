@@ -4,29 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/style.css" />
     <title>E-Bookopolis</title>
   </head>
   <body>
     <div class="wrapper">
-      <!-- Navigation and Logo -->
+      <!-- Navigation -->
       <nav>
-        <div class="logo">E-bookopolis</div>
+        <div class="logo"><a href="./index.html"><img src="./resources/img/Logo.svg" alt="Website Logo"></a></div>
+        <div class="searchBar">
+          <input type="text" name="search" id="search" placeholder="Search..." autocomplete="off">
+          <button type="submit"><img src="./resources/img/Search.svg" alt=""></button>
+        </div>
+
         <div class="nav-items">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="store.html">Store</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Cart</a></li>
+            <li>Hello User!</li>
           </ul>
-        </div>
-        <div class="profile-img">
-          <div class="image"></div>
         </div>
       </nav>
 
@@ -34,17 +37,60 @@
       <div class="hero">
         <div class="hero-left">
           <h1>
-            WHAT BOOK ARE <br />
-            YOU LOOKING FOR?
+            Which book are you reading today?
           </h1>
           <p>
             Not Sure What to read next? <br />Explore our catalog and find books
             you love
           </p>
-          <div class="btn" style="margin-left: -2px"><a href="./store.html">Explore Now</a></div>
+          <div class="btn" style="margin-left:-2px">
+            <a href="./store.html">Explore Now</a>
+          </div>
         </div>
+
         <div class="hero-right">
-          <img src="./resources/img/Group 2.svg" alt="" style="width: 460px" />
+          <div class="img01">
+            <img src="./resources/img/Hero-right-img-01.svg" alt="">
+          </div>
+          <div class="offer">
+            <div class="offer-circle"><p>60% <br> off!</p></div>
+          </div>
+          <div class="community">
+            <h6>Our Community</h6>
+            <div class="members">
+              <div class="member"><img src="./resources/img/member1.svg" alt=""></div>
+              <div class="member"><img src="./resources/img/member2.svg" alt=""></div>
+              <div class="member"><img src="./resources/img/member3.svg" alt=""></div>
+              <div class="member"></div>
+              <div class="member"></div>
+            </div>
+            <p>30k+ book lovers trust us</p>
+          </div>
+          <div class="img02">
+            <img src="./resources/img/Hero-right-img-02.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="new-release">
+        <div class="cover">
+          <h3>New Release</h3>
+          <img src="./resources/img/New Release.jpeg" alt="">
+        </div>
+        <div class="bookinfo">
+          <h1>Design for hackers</h1>
+          <h3>by David Kadavy</h3>
+          <div class="webcopy">
+            <p>The smash hit introductory design book that debuted at #18 on Amazon
+              Hackers are able to accomplish so much in so little time because they come from a community that's built upon sharing knowledge. When it comes to programming, they can learn whatever they need to learn by reading manuals, or simply typing in a Google search. But learning design isn't so simple.</p>
+              <div class="cta">
+                <div class="btn" style="margin-left:-2px">
+                  <a href="#">Buy Now</a>
+                </div>
+                <div class="btn btn2" style="margin-left:-2px">
+                  <a href="./store.html">Explore more books</a>
+              </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
