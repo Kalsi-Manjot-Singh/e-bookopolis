@@ -120,6 +120,15 @@ nav {
   color: var(--primary-05);
 }
 
+.cart-ammount {
+  background-color: var(--primary-01);
+  color: var(--complimentary-01);
+  padding: 0.7rem;
+  position:  absolute;
+  top:-3.3rem;
+  right: 1rem;
+}
+
 
 /* Hero Section */
 .hero, .new-release {
@@ -131,6 +140,7 @@ nav {
 }
 .new-release {
   margin-right: 18.25rem;
+  margin-bottom: 4rem;
 }
 .hero-left {
   margin-top: 4em;
@@ -430,7 +440,8 @@ footer p {
 .banner img {
   width: 81.25rem;
   height: 24.625rem;
-  margin: 3.5rem auto;
+  /* margin: 3.5rem auto; */
+  margin-top: 3.5rem;
   margin-left: 6.25rem;
 }
 
@@ -467,10 +478,101 @@ footer p {
   /* border: 2px solid red; */
   width: 81.25rem;
   margin-left: 6.25rem;
+  margin-top: 2rem;
 }
 
 .catalogue-grid{
   /* border: 2px solid green; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.griditems {
+  font-family: var(--paragraph-font-family);
+  font-size: 0.833rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-01);
+}
+.authorInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 5.36rem;
+}
+
+.price {
+  font-size: 2.074rem;
+}
+
+.griditems img {
+  transition: all 0.2s ease-in-out;
+  filter: brightness(100%);
+}
+
+.griditems img:hover{
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+/* .book-info-popup {
+  background-color: #fff;
+  border-radius: 1.1rem;
+  height: 11rem;
+  width: 30rem;
+  position: absolute;
+  top: 0;
+  left: 30%;
+} */
+
+.proceed, .subtotal {
+  margin-left: 26rem;
+}
+.proceed {
+  margin-top: 0.9rem;
+}
+.subtotal {
+  margin-top: 2rem;
+}
+
+.proceed a {
+  padding: 0.55rem 14rem;
+}
+.cart-item {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  background: var(--complimentary-01);
+  height: 15rem;
+}
+.cart-item h1, .cart-item p, .cart, .subtotal{
+  font-family: var(--paragraph-font-family);
+  font-weight: 500px;
+  font-size: 1.440rem;
+  line-height: 2rem;
+  color: var(--primary-01);
+}
+
+.cart-item .authorInfo {
+  margin-left: 0;
+}
+
+.cart-item .price p {
+  font-size: 2.499rem;
+}
+
+.item-cover {
+  margin-top: 1rem;
+}
+.item-info {
+  margin-left: 1.440rem;
+  margin-top: 3rem;
+}
+
+.ui-btns {
+  display: flex;
+  gap:0.5rem;
+  align-items: center; 
+  font-size: 1rem;
+  color: var(--primary-01);
+  font-weight: 700;
 }
