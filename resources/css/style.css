@@ -231,7 +231,7 @@ nav {
   flex-direction: row;
   margin-top: 0.938rem;
 }
-.community p {
+.community p, .myProfile label {
   font-family: var(--paragraph-font-family);
   font-weight: 500;
   font-size: 1rem;
@@ -292,24 +292,6 @@ nav {
 }
 
 
-footer {
-  background-color:#AAB2E5;
-  padding: 25px;
-  width: 1195px;
-  margin: 0 auto;
-  border-radius: 20px;
-}
-
-footer p {
-  color: #111a31;
-  font-size: 0.9em;
-}
-
-
-
-
-
-
 /* ----------------------------------------------------------------------- */
 /* Signup/Login Page Styles */
 
@@ -321,11 +303,14 @@ footer p {
   border-radius: 30px;
   padding-top: 40px;
 }
-.signup, .login {
+.myprof {
+  height: 550px;
+}
+.signup, .login, .myProfile {
   margin-left: 68px; 
 }
 
-.signup input, .login input {
+.signup input, .login input, .myProfile input {
   background: var(--complimentary-04);
   border: 0;
   border-radius: 8px;
@@ -336,7 +321,7 @@ footer p {
   outline: none;
   margin-right: 1rem;
 }
-.signup input:focus, .login input:focus {
+.signup input:focus, .login input:focus, .myProfile input:focus {
   border: 1px solid var(--primary-01);
 }
 ::-webkit-input-placeholder{
@@ -345,7 +330,7 @@ footer p {
   font-weight: 500;
 }
 
-.signup button, .login button {
+.signup button, .login button, .myProfile button {
   background: var(--primary-01);
   color: var(--complimentary-01);
   border-radius: 5px;
@@ -361,11 +346,11 @@ footer p {
   margin-top: 20px;
   cursor: pointer;
 }
-.signup button:hover, .login button:hover {
+.signup button:hover, .login button:hover, .myProfile button:hover {
   background-color: var(--complimentary-01);
   color: var(--primary-01);
 }
-.signup button:active, .login button:active {
+.signup button:active, .login button:active, .myProfile button:active {
   transform: scale(0.98);
 }
 .signup .linkText, .login .linkText {
