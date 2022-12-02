@@ -127,10 +127,51 @@ $(document).ready(() => {
 
   // The Login button event handler.
   $("#loginButton").click((e) => {
-    const user = JSON.parse(localStorage.getItem("users")) || "[]";
-    for (let users of user) {
-      console.log(users);
+    let loginEmail = $("#email1").val().trim();
+    let loginPassword = $("#passwd1").val().trim();
+    console.log(loginEmail);
+    console.log(loginPassword);
+    let isValidLoginEmail = false;
+    let isValidLoginPassword = false;
+    const emailRegEx = /^([a-zA-z0-9\._]+)@([a-zA-z0-9]+.([a-z]+)(.[a-z]+)?)$/;
+    if (loginEmail == "") {
+      $("#email1").next().text("This field is required");
     }
-    console.log(user[0])
+    else if (!emailRegEx.test(loginEmail)) {
+      $("#email1").next().text("Must be a valid email address");
+    }
+    else {
+      isValidLoginEmail = true;
+    }
+    if (loginPassword == "") {
+      $("#passwd1").next().text("This field is required");
+    } else {
+      isValidLoginPassword = true;
+    }
+    if (isValidLoginEmail && isValidLoginPassword == true) {
+      console.log("Hi1");
+      if (localStorage.length == 0) {
+        $("#email1").next().text("Incorrect Email/Password");
+      }
+      for (i = 0; i < localStorage.length; i++) {
+        let retrievedDatalogin = JSON.parse(localStorage.getItem('users'));
+        for (j = 0; j < retrievedDatalogin.length; j++) {
+          if (loginEmail == retrievedDatalogin[j][2]) {
+            if (loginPassword == retrievedDatalogin[j][3]) {
+              console.log("Login Successful");
+            }
+            else {
+              $("#passwd1").next().text("Incorrect Password");
+              break;
+            }
+          }
+          else {
+            $("#email1").next().text("Incorrect Email");
+            break;
+          }
+        }
+      }
+    }
+    e.preventDefault();
   })
 });
