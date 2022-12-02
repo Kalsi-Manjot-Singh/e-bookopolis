@@ -158,7 +158,12 @@ $(document).ready(() => {
         for (j = 0; j < retrievedDatalogin.length; j++) {
           if (loginEmail == retrievedDatalogin[j][2]) {
             if (loginPassword == retrievedDatalogin[j][3]) {
-              console.log("Login Successful");
+              $("#loginPopup").addClass("open-popup");
+              // window.location.replace("./index.html");
+              let tID = setTimeout(function () {
+                window.location.href = "./index.html";
+                window.clearTimeout(tID);		// clear time out.
+            }, 2000);
             }
             else {
               $("#passwd1").next().text("Incorrect Password");

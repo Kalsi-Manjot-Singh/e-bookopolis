@@ -17,7 +17,7 @@
   <div class="wrapper">
     <!-- Navigation -->
     <nav>
-      <div class="logo"><a href="#"><img src="./resources/img/Logo.svg" alt="Website Logo"></a></div>
+      <div class="logo"><a href="./index.html"><img src="./resources/img/Logo.svg" alt="Website Logo"></a></div>
       <div class="searchBar">
         <input type="text" name="search" id="search" placeholder="Search..." autocomplete="off">
         <button type="submit"><img src="./resources/img/Search.svg" alt=""></button>
@@ -25,10 +25,8 @@
 
       <div class="nav-items">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Profile</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#">Orders</a></li>
-          <li><a href="#">Wishlist</a></li>
           <li><a href="#">Cart</a></li>
         </ul>
       </div>
@@ -79,6 +77,10 @@
 
             <button type="submit" id="loginButton">Login</button>
             <p class="linkText"><a href="./" id="linkCreateAccount">Don't have an account? Signup</a></p>
+
+            <div class="popup" id="loginPopup">
+              <h1>You have successfully logged in.</h1>
+            </div>
           </form>
 
         </div>
@@ -113,7 +115,7 @@
 
   </div>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="./resources/js/main.js" defer></script>
+  <script src="./resources/js/signup.js" defer></script>
 </body>
 
 </html>
