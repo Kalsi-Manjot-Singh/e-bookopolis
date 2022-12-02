@@ -69,9 +69,6 @@ $(document).ready(() => {
     $("#cpasswd").val(cpasswd);
 
     const users = (localStorage.users) ? JSON.parse(localStorage.users) : [];
-
-
-
     if (isValidFname && isValidCPassword && isValidLname && isValidEmail && isValidPassword === true) {
       //* Validating if an account with the same email already exists
       if (localStorage.length == 0) {
@@ -89,6 +86,7 @@ $(document).ready(() => {
             users.push(newUser);
             localStorage.users = JSON.stringify(users);
             $("#popup").addClass("open-popup");
+            break;
           }
           else {
             $("#email").next().text("An Account with the same email already exists.");
@@ -129,8 +127,6 @@ $(document).ready(() => {
   $("#loginButton").click((e) => {
     let loginEmail = $("#email1").val().trim();
     let loginPassword = $("#passwd1").val().trim();
-    console.log(loginEmail);
-    console.log(loginPassword);
     let isValidLoginEmail = false;
     let isValidLoginPassword = false;
     const emailRegEx = /^([a-zA-z0-9\._]+)@([a-zA-z0-9]+.([a-z]+)(.[a-z]+)?)$/;
@@ -149,7 +145,6 @@ $(document).ready(() => {
       isValidLoginPassword = true;
     }
     if (isValidLoginEmail && isValidLoginPassword == true) {
-      console.log("Hi1");
       if (localStorage.length == 0) {
         $("#email1").next().text("Incorrect Email/Password");
       }
@@ -158,12 +153,15 @@ $(document).ready(() => {
         for (j = 0; j < retrievedDatalogin.length; j++) {
           if (loginEmail == retrievedDatalogin[j][2]) {
             if (loginPassword == retrievedDatalogin[j][3]) {
+              let loginUser = localStorage.logUsr || "";
+              localStorage.logUsr = loginUser.concat(loginEmail, " ");
               $("#loginPopup").addClass("open-popup");
               // window.location.replace("./index.html");
               let tID = setTimeout(function () {
                 window.location.href = "./index.html";
                 window.clearTimeout(tID);		// clear time out.
-            }, 2000);
+              }, 2000);
+              break;
             }
             else {
               $("#passwd1").next().text("Incorrect Password");
