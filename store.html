@@ -20,7 +20,8 @@
     <nav>
       <div class="logo"><a href="./index.html"><img src="./resources/img/Logo.svg" alt="Website Logo"></a></div>
       <div class="searchBar">
-        <input type="text" name="search" id="search" placeholder="Search..." autocomplete="off">
+        <input type="text" name="search" id="search" placeholder="Search by title..." autocomplete="off" 
+        onkeyup="search()">
         <button type="submit"><img src="./resources/img/Search.svg" alt=""></button>
       </div>
 
@@ -62,61 +63,61 @@
         <div class="griditems"><a href="">
             <img src="./resources/css/img/book2.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>The psychology of money</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Morgan Housell</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$23</p>
           </div>
         </div>
         <div class="griditems"><a href="">
             <img src="./resources/css/img/book3.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>Behave: The biology of humans at our best and our worst</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Robert Sapolsky</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$41</p>
           </div>
         </div>
         <div class="griditems">
           <a href=""><img src="./resources/css/img/book4.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>The Alchemist</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Paulo Couelho</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$8</p>
           </div>
         </div>
         <div class="griditems">
           <a href=""><img src="./resources/css/img/book5.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>The obstacle is the way</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Ryan Haliday</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$20</p>
           </div>
         </div>
       </div>
@@ -145,70 +146,70 @@
 
           <a href=""><img src="./resources/css/img/book4.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>The Alchemist</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Paulo Coelho</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$8</p>
           </div>
         </div>
         <div class="griditems">
 
           <a href=""><img src="./resources/css/img/book6.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>The Lord of the rings: the fellowship of the ring</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">J.R.R. Tolkein</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$30</p>
           </div>
         </div>
         <div class="griditems">
 
           <a href=""><img src="./resources/css/img/book7.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>Kafka on the shore</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Haruki Murakami</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$26</p>
           </div>
         </div>
         <div class="griditems">
 
           <a href=""><img src="./resources/css/img/book8.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>The Great Gatbsy</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">F. Scott Fitzergerald</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$32</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="catalogue">
+    <div class="catalogue" id="catalogue">
       <h1>Non Fiction</h1>
       <div class="divider"></div>
       <div class="catalogue-grid">
@@ -216,95 +217,87 @@
 
           <a href=""><img src="./resources/css/img/book9.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>Range: How Generalists triumph in a specialised world</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">David Epsteim</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$40</p>
           </div>
         </div>
         <div class="griditems">
 
           <a href=""><img src="./resources/css/img/book10.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>Das Kapital</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Karl Marx</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$100</p>
           </div>
         </div>
         <div class="griditems">
 
           <a href=""><img src="./resources/css/img/book3.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>Behave: The biology of humans at our best and our worst</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Rober Sapolsky</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$41</p>
           </div>
         </div>
         <div class="griditems">
 
           <a href=""><img src="./resources/css/img/book2.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>The Psychology of money</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Morgan Housell</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$23</p>
           </div>
         </div>
         <div class="griditems">
 
           <a href=""><img src="./resources/css/img/book5.svg" alt=""></a>
           <div class="bookTitle">
-            <p>Harry Potter and the philosopher's stone</p>
+            <p>The obstacle is the way</p>
           </div>
           <div class="authorInfo">
             <div class="by">
               <p>By </p>
             </div>
-            <div class="author">J.K. Rowling</div>
+            <div class="author">Ryan Haliday</div>
           </div>
           <div class="price">
-            <p>$11</p>
+            <p>$20</p>
           </div>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-    <!-- <footer>
-        <p>&copy;Copyrights 2022</p>
-      </footer> -->
   </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+  <script src="./resources/js/store.js"></script>
 </body>
 
 </html>
