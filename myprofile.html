@@ -30,37 +30,52 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="#">Orders</a></li>
           <li><a href="#">Cart</a></li>
-          <li><a href="">Hello <span>User</span></a></li>
+          <li><a href="">Hello <span id="loginUser">User</span></a></li>
         </ul>
       </div>
     </nav>
 
-  
+
     <div class="hero">
       <div class="hero-left">
         <div class="form myprof">
           <form class="myProfile" id="myProfile">
             <h1>My Profile</h1>
             <!-- <div class="divider"></div> -->
-
-            <input type="email" placeholder="Email" id="email" name="email" maxlength="50" disabled="disabled"/>
-
+            <input type="email" placeholder="Email" id="email" name="email" maxlength="50" disabled="disabled" />
             <input type="text" placeholder="First Name" id="fname" name="fname" disabled="disabled" />
-
-            <input type="text" placeholder="Last Name" id="lname" name="lname" disabled="disabled"/>
-
-            <input type="text" placeholder="Street No" id="streetNo" name="streetNo"/>
-            <input type="text" placeholder="Street Name" id="streetName" name="streetName"/>
-            <input type="text" placeholder="City" id="city" name="city"/>
-            <input type="text" placeholder="Province" id="province" name="province"/>
-            <input type="text" placeholder="Postal Code" id="postal" name="postal"/>
-            <input type="text" placeholder="Country" id="country" name="country"/>
-
-
+            <input type="text" placeholder="Last Name" id="lname" name="lname" disabled="disabled" />
+            <input type="text" placeholder="Street No" id="streetNo" name="streetNo" />
+            <span>*</span>
+            <input type="text" placeholder="Street Name" id="streetName" name="streetName" />
+            <span>*</span>
+            <input type="text" placeholder="City" id="city" name="city" />
+            <span>*</span>
+            <!-- <input type="text" placeholder="Province" id="province" name="province" /> -->
+            <select name="province" id="province">
+              <option value="">-- Please choose a Province --</option>
+              <option value="Alberta">Alberta</option>
+              <option value="British Colombia">British Colombia</option>
+              <option value="Manitoba">Manitoba</option>
+              <option value="New Brunswick">New Brunswick</option>
+              <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+              <option value="Northwest Territories">Northwest Territories</option>
+              <option value="Nova Scotia">Nova Scotia</option>
+              <option value="Nunavut">Nunavut</option>
+              <option value="Ontario">Ontario</option>
+              <option value="Prince Edward Island">Prince Edward Island</option>
+              <option value="Quebec">Quebec</option>
+              <option value="Saskatchewan">Saskatchewan</option>
+              <option value="Yukon">Yukon</option>
+            </select>
+            <span>*</span>
+            <input type="text" placeholder="Postal Code" id="postal" name="postal" />
+            <span>*</span>
             <button type="submit" id="updateProfile">Update Profile</button>
-            
+
+
           </form>
-          </div>
+        </div>
       </div>
 
       <div class="hero-right">
@@ -102,7 +117,8 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="./resources/js/cart.js"></script>
+  <script src="./resources/js/index.js"></script>
+  <script src="./resources/js/myprofile.js"></script>
 </body>
 
 </html>

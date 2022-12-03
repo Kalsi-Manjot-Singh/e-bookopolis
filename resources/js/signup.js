@@ -77,21 +77,21 @@ $(document).ready(() => {
         localStorage.users = JSON.stringify(users);
         $("#popup").addClass("open-popup");
       }
-      for (i = 0; i < localStorage.length; i++) {
+      else {
         let retrievedData = JSON.parse(localStorage.getItem('users'));
+        let listOfEmails = [];
         for (j = 0; j < retrievedData.length; j++) {
-          // console.log(retrievedData[j][2]);
-          if (email != retrievedData[j][2]) {
-            const newUser = [fname, lname, email, passwd];
-            users.push(newUser);
-            localStorage.users = JSON.stringify(users);
-            $("#popup").addClass("open-popup");
-            break;
-          }
-          else {
-            $("#email").next().text("An Account with the same email already exists.");
-            break;
-          }
+          listOfEmails.push(retrievedData[j][2]);
+        }
+        let stringOfEmails = listOfEmails.toString();
+        if (!stringOfEmails.includes(email)) {
+          const newUser = [fname, lname, email, passwd];
+          users.push(newUser);
+          localStorage.users = JSON.stringify(users);
+          $("#popup").addClass("open-popup");
+        }
+        else {
+          $("#email").next().text("An Account with the same email already exists.");
         }
       }
     }
@@ -148,30 +148,33 @@ $(document).ready(() => {
       if (localStorage.length == 0) {
         $("#email1").next().text("Incorrect Email/Password");
       }
-      for (i = 0; i < localStorage.length; i++) {
+      else {
         let retrievedDatalogin = JSON.parse(localStorage.getItem('users'));
+        let listOfEmails = [];
+        let listOfPasswords = [];
         for (j = 0; j < retrievedDatalogin.length; j++) {
-          if (loginEmail == retrievedDatalogin[j][2]) {
-            if (loginPassword == retrievedDatalogin[j][3]) {
-              let loginUser = localStorage.logUsr || "";
-              localStorage.logUsr = loginUser.concat(loginEmail, " ");
-              $("#loginPopup").addClass("open-popup");
-              // window.location.replace("./index.html");
-              let tID = setTimeout(function () {
-                window.location.href = "./index.html";
-                window.clearTimeout(tID);		// clear time out.
-              }, 2000);
-              break;
-            }
-            else {
-              $("#passwd1").next().text("Incorrect Password");
-              break;
-            }
+          listOfEmails.push(retrievedDatalogin[j][2]);
+          listOfPasswords.push(retrievedDatalogin[j][3]);
+        }
+        let stringOfEmails = listOfEmails.toString();
+        let stringOfPasswords = listOfPasswords.toString();
+        if (stringOfEmails.includes(loginEmail)) {
+          if (stringOfPasswords.includes(loginPassword)) {
+            let loginUser = localStorage.logUsr || "";
+            localStorage.logUsr = loginUser.concat(loginEmail, " ");
+            $("#loginPopup").addClass("open-popup");
+            // window.location.replace("./index.html");
+            let tID = setTimeout(function () {
+              window.location.href = "./index.html";
+              window.clearTimeout(tID);		// clear time out.
+            }, 2000);
           }
           else {
-            $("#email1").next().text("Incorrect Email");
-            break;
+            $("#passwd1").next().text("Incorrect Password");
           }
+        }
+        else {
+          $("#email1").next().text("Incorrect Email");
         }
       }
     }
