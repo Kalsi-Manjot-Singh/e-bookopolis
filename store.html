@@ -20,17 +20,16 @@
     <nav>
       <div class="logo"><a href="./index.html"><img src="./resources/img/Logo.svg" alt="Website Logo"></a></div>
       <div class="searchBar">
-        <input type="text" name="search" id="search" placeholder="Search by title..." autocomplete="off" 
-        onkeyup="search()">
+        <input type="text" name="search" id="search" placeholder="Search by title..." autocomplete="off"
+          onkeyup="search()">
         <button type="submit"><img src="./resources/img/Search.svg" alt=""></button>
       </div>
 
       <div class="nav-items">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">Orders</a></li>
-          <li><a href="#">Cart</a></li>
-          <li><a href="">Hello <span>User</span></a></li>
+          <li><a href="#myCart">Cart</a></li>
+          <li><a href="./myprofile.html">Hello <span id="loginUser"></span></a></li>
         </ul>
       </div>
     </nav>
@@ -46,7 +45,7 @@
       <div class="divider"></div>
       <div class="catalogue-grid">
         <div class="griditems">
-          <a href="./Product Pages/book1.html"><img src="./resources/css/img/book1.svg" alt=""></a>
+          <a href="#"><img src="./resources/css/img/book1.svg" alt=""></a>
           <div class="bookTitle">
             <p>Harry Potter and the philosopher's stone</p>
           </div>
@@ -59,7 +58,9 @@
           <div class="price">
             <p>$11</p>
           </div>
+        <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
+
         <div class="griditems"><a href="">
             <img src="./resources/css/img/book2.svg" alt=""></a>
           <div class="bookTitle">
@@ -74,6 +75,7 @@
           <div class="price">
             <p>$23</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems"><a href="">
             <img src="./resources/css/img/book3.svg" alt=""></a>
@@ -89,6 +91,7 @@
           <div class="price">
             <p>$41</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
           <a href=""><img src="./resources/css/img/book4.svg" alt=""></a>
@@ -104,6 +107,7 @@
           <div class="price">
             <p>$8</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
           <a href=""><img src="./resources/css/img/book5.svg" alt=""></a>
@@ -119,6 +123,7 @@
           <div class="price">
             <p>$20</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
       </div>
     </div>
@@ -141,6 +146,7 @@
           <div class="price">
             <p>$11</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
 
@@ -157,6 +163,7 @@
           <div class="price">
             <p>$8</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
 
@@ -173,6 +180,7 @@
           <div class="price">
             <p>$30</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
 
@@ -189,6 +197,7 @@
           <div class="price">
             <p>$26</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
 
@@ -205,6 +214,7 @@
           <div class="price">
             <p>$32</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
       </div>
     </div>
@@ -228,6 +238,7 @@
           <div class="price">
             <p>$40</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
 
@@ -244,6 +255,7 @@
           <div class="price">
             <p>$100</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
 
@@ -260,6 +272,7 @@
           <div class="price">
             <p>$41</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
 
@@ -276,6 +289,7 @@
           <div class="price">
             <p>$23</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
         <div class="griditems">
 
@@ -292,12 +306,33 @@
           <div class="price">
             <p>$20</p>
           </div>
+          <button class="btn btn-primary btn-cart" type="button">Add to cart</button>
         </div>
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+
+  <section class="container content-section" id="myCart">
+    <h2 class="section-header">CART</h2>
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+      
+    </div>
+    <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+    </div>
+    <button class="btn btn-primary btn-purchase" type="button">Proceed to checkout</button>
+</section>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="./resources/js/store.js"></script>
+  <script src="./resources/js/index.js"></script>
 </body>
 
 </html>
