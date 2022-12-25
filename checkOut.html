@@ -1,148 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./resources/css/style.css" />
-    <title>E-Bookopolis: Add Book</title>
-    <style>
-      /* Login Page Styles */
-      .newBook-page {
-        background-color: #587ddb;
-        border-radius: 20px;
-        height: 600px;
-        width: 587px;
-        margin-top: 70px;
-      }
 
-      .form {
-        margin-top: 120px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./resources/css/style.css" />
+  <title>E-Bookopolis - My Profile</title>
 
-      .newBook {
-        text-align: center;
-      }
+</head>
 
-      .divider {
-        border: 2px solid #335ecc;
-        width: 233px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+<body>
+  <div class="wrapper">
+    <!-- Navigation and Logo -->
+    <nav>
+      <div class="logo"><a href="./index.html"><img src="./resources/img/Logo.svg" alt="Website Logo"></a></div>
+      <!-- <div class="searchBar">
+        <input type="text" name="search" id="search" placeholder="Search..." autocomplete="off">
+        <button type="submit"><img src="./resources/img/Search.svg" alt=""></button>
+      </div> -->
 
-      .newBook h1 {
-        font-size: 30px;
-        color: white;
-      }
+      <div class="nav-items">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="">Hello <span id="loginUser">User</span></a></li>
+        </ul>
+      </div>
+    </nav>
 
-      .newBook input {
-        background: #82a5ff;
-        border: 0;
-        border-radius: 8px;
-        height: 32px;
-        width: 345px;
-        font-size: 14px;
-        padding: 8px;
-        outline: none;
-      }
-      ::-webkit-input-placeholder {
-        color: #e0e1e5;
-      }
 
-      .newBook button {
-        background: #5d8ffc;
-        color: #fff;
-        border: 1px solid #5d8ffc;
-        border-radius: 5px;
-        padding: 5px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 15px;
-        width: 164px;
-        transition: 0.3s;
-        -webkit-transition: 0.3s;
-        -moz-transition: 0.3s;
-        transition: all 0.25s ease-in;
-      }
+    <div class="hero">
+      <div class="hero-left">
+        <div class="form myPay">
+          <form class="myProfile" id="myProfile">
+            <h1>Payment Information</h1>
+            <!-- <div class="divider"></div> -->
+            <input type="email" placeholder="Email" id="email" name="email" maxlength="50" disabled="disabled" />
+            <input type="text" placeholder="First Name" id="fname" name="fname" disabled="disabled" />
+            <input type="text" placeholder="Last Name" id="lname" name="lname" disabled="disabled" />
+            <input type="text" placeholder="Street No" id="streetNo" name="streetNo" />
+            <span>*</span>
+            <input type="text" placeholder="Street Name" id="streetName" name="streetName" />
+            <span>*</span>
+            <input type="text" placeholder="City" id="city" name="city" />
+            <span>*</span>
+            <!-- <input type="text" placeholder="Province" id="province" name="province" /> -->
+            <select name="province" id="province">
+              <option value="">-- Please choose a Province --</option>
+              <option value="Alberta">Alberta</option>
+              <option value="British Colombia">British Colombia</option>
+              <option value="Manitoba">Manitoba</option>
+              <option value="New Brunswick">New Brunswick</option>
+              <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+              <option value="Northwest Territories">Northwest Territories</option>
+              <option value="Nova Scotia">Nova Scotia</option>
+              <option value="Nunavut">Nunavut</option>
+              <option value="Ontario">Ontario</option>
+              <option value="Prince Edward Island">Prince Edward Island</option>
+              <option value="Quebec">Quebec</option>
+              <option value="Saskatchewan">Saskatchewan</option>
+              <option value="Yukon">Yukon</option>
+            </select>
+            <span>*</span>
+            <input type="text" placeholder="Postal Code" id="postal" name="postal" />
+            <span>*</span>
+            <input type="text" placeholder="Credit/Debit Card No" id="card" name="card" />
+            <span>*</span>
+            <input type="text" placeholder="Expiry Date" id="expiry" name="expiry" />
+            <span>*</span>
+            <input type="text" placeholder="CVV" id="cvv" name="cvv" />
+            <span>*</span>
+            <button type="submit" id="pay">Pay</button>
 
-      .newBook button:hover {
-        background: #fff;
-        color: #5d8ffc;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- Navigation and Logo -->
-      <nav>
-        <div class="logo">E-bookopolis</div>
-        <div class="nav-items">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="store.html">Store</a></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
+
+          </form>
         </div>
-        <div class="profile-img">
-          <div class="image"></div>
-        </div>
-      </nav>
+      </div>
 
-      <!-- Hero Section -->
-      <div class="hero">
-        <div class="newBook-page">
-          <div class="form">
-            <form class="newBook">
-              <h1>Customer Information Form</h1>
-              <div class="divider"></div>
-              <input
-                type="text"
-                placeholder="Enter Your Name"
-                id="cname"
-                name="cname"
-              />
-              <input
-                type="text"
-                placeholder="Enter Your contact number"
-                id="cno."
-                name="cno."
-              />
-              <input
-                type="email"
-                placeholder="Enter Your email"
-                id="cemail"
-                name="cemail"
-              />
-              <input
-                type="text"
-                placeholder="Enter Your address"
-                id="caddress"
-                name="caddress"
-              />
-              <input
-                type="text"
-                placeholder="Enter the shipping address"
-                id="saddress"
-                name="saddress"
-              />
-              <button>Proceed To Payment</button>
-            </form>
+      <div class="hero-right">
+        <div class="img01">
+          <img src="./resources/img/Hero-right-img-01.svg" alt="">
+        </div>
+        <div class="offer">
+          <div class="offer-circle">
+            <p>60% <br> off!</p>
           </div>
         </div>
-        <div class="hero-right">
-          <img src="./resources/img/Group 2.svg" alt="" style="width: 460px" />
+        <div class="community">
+          <h6>Our Community</h6>
+          <div class="members">
+            <div class="member"><img src="./resources/img/member1.svg" alt=""></div>
+            <div class="member"><img src="./resources/img/member2.svg" alt=""></div>
+            <div class="member"><img src="./resources/img/member3.svg" alt=""></div>
+            <div class="member"></div>
+            <div class="member"></div>
+          </div>
+          <p>30k+ book lovers trust us</p>
+        </div>
+        <div class="img02">
+          <img src="./resources/img/Hero-right-img-02.svg" alt="">
         </div>
       </div>
     </div>
-  </body>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="./resources/js/index.js"></script>
+  <script src="./resources/js/myprofile.js"></script>
+</body>
+
 </html>
