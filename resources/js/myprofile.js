@@ -68,6 +68,7 @@ $(document).ready(() => {
             addressStorage.push(address);
             localStorage.addressStorage = JSON.stringify(addressStorage);
             alert("Updation Successful");
+            
 
 
         }
@@ -82,4 +83,12 @@ $(document).ready(() => {
     // document.getElementById("province").next().text(splittedAddressString[4].slice(1, splittedAddressString[4].length - 1));
     $("#province").next().text(splittedAddressString[4].slice(1, splittedAddressString[4].length - 1));
     document.getElementById("postal").placeholder = splittedAddressString[5].slice(1, splittedAddressString[5].length - 3);
+
+
+    document.getElementById("pay").addEventListener('click', (e)=>{
+        alert("Your payment was successful");
+        location.href = "./index.html";
+        e.preventDefault();
+    })
+
 });
